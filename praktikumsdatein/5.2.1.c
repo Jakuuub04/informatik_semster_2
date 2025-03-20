@@ -1,4 +1,11 @@
-#include <stdio.h>
+/**********************************************************************\
+* Kurzbeschreibung: Aufgabe 5.2 mit der Berechnung von Ausdrücken
+*
+* Datum: Autor:
+* <<20.03.2025>> <<Jakob Hofmmann>>
+*
+\**********************************************************************/
+
 
 int main() {
  

@@ -1,3 +1,11 @@
+/**********************************************************************\
+* Kurzbeschreibung: Aufgabe 5.4 mit den verschiedenen Optionen der Wert bestimmung
+*
+* Datum: Autor:
+* <<20.03.2025>> <<Jakob Hofmmann>>
+*
+\**********************************************************************/
+
 #include <stdio.h>
 
 int main() {
@@ -15,7 +23,7 @@ int main() {
         wert_1 = 0; 
     }
 
-    printf("Der Wert ist für Option 1 ist %d\n", wert_1);
+    printf("Der Wert für Option 1 ist %d\n", wert_1);
     
     /* Option 2 */  
 
@@ -30,7 +38,7 @@ int main() {
         wert_2 = 0;
     }
 
-    printf("Der Wert ist für Option 2 ist %d\n", wert_2);
+    printf("Der Wert für Option 2 ist %d\n", wert_2);
 
     /* Option 3 */
 
@@ -44,7 +52,7 @@ int main() {
         wert_3 = 0;
     }
 
-    printf("Der Wert ist für Option 3 ist %d\n", wert_3);
+    printf("Der Wert für Option 3 ist %d\n", wert_3);
 
     /* Option 4 */  
 
@@ -80,18 +88,32 @@ int main() {
     /* Option 6 */  
 
     int wert_6;
-        
+    char antwort = 'A';
+
+    if (antwort != 'j' && antwort != 'J')
+    {  
+        wert_6 = 1;
+    } else {
+        wert_6 = 0;
+    }
+    
     printf("Der Wert für Option 6 ist %d\n" , wert_6);
 
     /* Option 7 */  
 
     int wert_7;
-        
+    int zaehler = 30;
+
+    if (zaehler >=5 && zaehler <= 25)
+    {
+        wert_7 =0;
+    } else {
+        wert_7 = 1;
+    }
         
     printf("Der Wert für Option 7 ist %d\n" , wert_7);
 
 
-    
     return 0;
 
 }
