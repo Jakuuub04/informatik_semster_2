@@ -15,6 +15,7 @@ int main() {
     int b = (4 + 5) / (9 - 6);
     int c = 6 + 8 / 4;
     int ausdruck_1 = a * b % c;
+    int z = 3;
     
     int ausdruck_2 = (4 - 10 + (100 + 100 - 40 + 80) / (5 * 2 * 4) + 36) / ((90 - 30) / (10 - 5));
     
