@@ -113,7 +113,6 @@ int main() {
         
     printf("Der Wert für Option 7 ist %d\n" , wert_7);
 
-
     return 0;
 
 }
