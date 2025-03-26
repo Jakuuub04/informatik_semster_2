@@ -10,7 +10,7 @@
 
 int main () {
     
-    //#1
+    //#1.0
 
     short x;
     
@@ -25,7 +25,7 @@ int main () {
     printf("Die eingegebene Zahl lautet: %d\n", x);
     printf("Der Wert ist gerade wenn 0 und ungerade wenn 1: %d\n", wert);
 
-    //#2
+    //#2.0
 
     unsigned short u = 256;
     int wert2;
