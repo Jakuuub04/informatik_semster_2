@@ -45,13 +45,16 @@ int main() {
     int wert_3;
     int z = 15;
 
+    wert_3 = ((z / 2 == !0 && z % 3 == 0 && z % 5 == 0) > 0);
+    /* 
     if (z / 2 == !0 && z % 3 == 0 && z % 5 == 0)
     {
         wert_3 = 1;
     } else {
         wert_3 = 0;
     }
-
+    */
+   
     printf("Der Wert für Option 3 ist %d\n", wert_3);
 
     /* Option 4 */  
