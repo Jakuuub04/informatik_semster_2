@@ -17,7 +17,7 @@ int main () {
 
     int wert;
 
-    wert = x1 & 1;
+    wert = x1 & 0x1;
 
     printf("Der Wert ist gerade wenn 0 und ungerade wenn 1: %d\n", wert);
 
@@ -26,7 +26,7 @@ int main () {
     unsigned short u2 = 256;
     int wert2;
 
-    wert2 = u2 > 255;
+    wert2 = u2 & ~0x00FF;
 
     printf("Die Zahl u ist größer als 255: %d\n", wert2);
     
@@ -36,7 +36,7 @@ int main () {
     int wert3;
     unsigned short rechenhilfe;
 
-    rechenhilfe = 0x0100;
+    rechenhilfe = 0x0200;
 
     wert3 = u3 & rechenhilfe;
 
@@ -47,7 +47,7 @@ int main () {
     short x4 = 120;
     int wert4;
 
-    wert4 = x4 > 0 && x4 < 127;
+    wert4 = ((x4 & ~0x007F) == 0);
 
     printf("Der Wert liegt zwischen [0,127] %d\n", wert4);
 
@@ -56,10 +56,9 @@ int main () {
     unsigned short u5 = 43;
     int wert5;
 
-    wert5 = (u5 % 4) == 0;
+    wert5 = (u5 & 3) == 0;
 
     printf("Ist der Wert durch 4 Teilbar?: %d\n", wert5);
 
     return 0;
-
 }
