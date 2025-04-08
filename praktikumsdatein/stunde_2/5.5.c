@@ -14,16 +14,11 @@ int main () {
 
     short x1;
     x1 = 7;
-    
-    //printf("Bitte geben sie eine Zahel ein: ");
-    //scanf("%hd", &x);
 
     int wert;
 
     wert = x1 & 1;
 
-
-    //printf("Die eingegebene Zahl lautet: %d\n", x);
     printf("Der Wert ist gerade wenn 0 und ungerade wenn 1: %d\n", wert);
 
     //#2.0
