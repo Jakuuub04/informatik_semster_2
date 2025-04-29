@@ -12,7 +12,7 @@ int main() {
         }
     else if (stundenzahl >= 6 || stundenzahl <= 10)
         {
-            printf("Guten Morgen!");
+                             printf("Guten Morgen!");
         }
 
     return 0;
