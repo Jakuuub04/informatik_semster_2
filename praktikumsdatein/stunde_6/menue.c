@@ -16,13 +16,13 @@ int main () {
             printf(".... Sie haben (B) eenden gewählt ....\n");
             break;
         case 'D':
-            printf(".... Sie haben (D) eenden gewählt ....\n");
+            printf(".... Sie haben (D) rucken gewählt ....\n");
             break;
         case 'E':
-            printf(".... Sie haben (E) eenden gewählt ....\n");
+            printf(".... Sie haben (E) ingeben gewählt ....\n");
             break;
         case 'L':
-            printf(".... Sie haben (L) eenden gewählt ....\n");
+            printf(".... Sie haben (L) oeschen gewählt ....\n");
             break;
     }
 
