@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <time.h>
 
-int zahlen_sotieren(int anzahl[] ){
+int zahlen_sotieren(int anzahl[], int sotiert[]){
 
 }
 
