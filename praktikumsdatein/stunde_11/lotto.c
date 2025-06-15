@@ -50,4 +50,5 @@ for(int i = 0; i < gezogen; i++) {
 printf("\n");
 
 return 0;
+
 }
