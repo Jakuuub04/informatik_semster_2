@@ -18,7 +18,7 @@ int main() {
 
     printf("Zahl 1: ");
     scanf("%d", &a);
-    printf("Zahl 2: ");
+    printf("Zahl 2: "); 
     scanf("%d", &b);
     printf("Zahl 3: ");
     scanf("%d", &c);

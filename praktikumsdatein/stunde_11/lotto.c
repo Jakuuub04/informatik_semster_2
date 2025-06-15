@@ -2,8 +2,16 @@
 #include <stdio.h>
 #include <time.h>
 
-int zahlen_sotieren(int anzahl[], int sotiert[]){
-
+void bubble(int zusotieren[], int anzahl) {
+    for(int i = 0; i < anzahl - 1; i++) {
+        for (int j = 0; j < anzahl - 1; j++) {
+            if(zusotieren[j] > zusotieren[j + 1]) {
+                int temp = zusotieren[j];
+                zusotieren[j] = zusotieren[j + 1];
+                zusotieren[j + 1] = temp;
+            }
+        }
+    }
 }
 
 int main() {
@@ -27,10 +35,10 @@ if(scanf("%d", &gezogen) != 1 || gezogen < 1 || gezogen > verfuegbar) {
     return 2;
 }
 
-printf("\n\n");
+printf("\n");
 
 if(gezogen <= verfuegbar) {
-    printf("==== %d aus %d ====", gezogen, verfuegbar);
+    printf("==== %d aus %d ====\n", gezogen, verfuegbar);
 } else {
     printf("Die gezogenen dürfen nicht größer als die Verfügbaren sein!");
     return 3;
@@ -43,11 +51,26 @@ for(int i = 0; i < verfuegbar; i++) {
     menge[i] = i + 1; 
 }
 
+//for(int i = 0; i < gezogen; i++) {
+//    gezogene[i] = menge[i];
+//}
+
+for (int i = verfuegbar - 1; i > 0; i--) { //- 1 weil wir ja eine menge haben, diese ist menge[5] -> 0,1,2,3,4 
+    int j = rand() % (i + 1);
+    int temp = menge[i];
+    menge[i] = menge[j];
+    menge[j] = temp;
+}
+
 for(int i = 0; i < gezogen; i++) {
     gezogene[i] = menge[i];
 }
 
-printf("\n");
+bubble(gezogene, gezogen);
+
+for (int i = 0; i < gezogen; i++) {
+    printf("%d ", gezogene[i]);
+}
 
 return 0;
 
