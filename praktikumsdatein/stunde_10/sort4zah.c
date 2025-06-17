@@ -17,19 +17,19 @@ int main() {
     printf("-----------------------------\n");
 
     printf("Zahl 1: ");
-    if(scanf("%d", &a) != 1) {
+    while(scanf("%d", &a) != 1) {
         return 1;
     }
     printf("Zahl 2: "); 
-    if(scanf("%d", &b) != 1) {
+    while(scanf("%d", &b) != 1) {
         return 1;
     }
     printf("Zahl 3: ");
-    if(scanf("%d", &c) != 1) {
+    while(scanf("%d", &c) != 1) {
         return 1;
     }
     printf("Zahl 4: ");
-    if(scanf("%d", &d) != 1) {
+    while(scanf("%d", &d) != 1) {
         return 1;
     }
 

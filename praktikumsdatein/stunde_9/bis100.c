@@ -24,9 +24,7 @@ int main() {
             while(1) {
                 char antwort;
                 int wurf = wuerfeln();
-                if(printf("Du würfelst: %d\n", wurf) != 1) {
-                    return 1;
-                }
+                printf("Du würfelst: %d\n", wurf);
 
                 if (wurf == 1) {
                     printf("Du hast eine 1 gewürfelt, dein Zug ist somit beendet.\n");

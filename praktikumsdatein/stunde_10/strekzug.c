@@ -17,7 +17,7 @@ int main() {
 
     while (1) {
         printf("Neuer Streckenpunkt x,y (Abbruch bei x=-1): ");
-    if(scanf("%d", &newx) != 1) {
+    while(scanf("%d", &newx) != 1) {
         return 1;
     }
 

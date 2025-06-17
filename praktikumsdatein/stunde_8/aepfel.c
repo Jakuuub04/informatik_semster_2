@@ -4,10 +4,14 @@ int main() {
 
     int aepfel = 0;
     int Hans = 3, Fritz = 5, runde = 1; 
+    int valid = 0;
+ 
 
     printf("Wie viele Aepfel haben Fritz und Hans gekauft: ");
-    if(scanf("%d", &aepfel) != 1) {
-        return 1;
+    while (valid != 1) {
+        printf("Falsch, neuer Versuch: ");
+        valid =  scanf("%d", &aepfel);
+        fflush(stdin);
     }
     
     while (aepfel % 8 != 0) {

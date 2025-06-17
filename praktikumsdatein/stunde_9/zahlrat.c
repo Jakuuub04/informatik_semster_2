@@ -14,9 +14,10 @@ int main() {
     
     do {
         printf("Dein %d Versuch: ", versuch);
-        if(scanf("%d", &tipp) != 1) {
+        while(scanf("%d", &tipp) != 1) {
             return 1;
         }
+
         versuch ++;
 
         if (tipp < zufallszahl) {

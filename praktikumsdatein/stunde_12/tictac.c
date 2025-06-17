@@ -57,7 +57,9 @@ int main() {
     char symbol;
 
     printf("Spielfeldgroesse (mind. 3, maximal 10)? ");
-    scanf("%d",&groesse);
+    while(scanf("%d",&groesse) != 1) {
+        return 1;
+    }
     if(groesse < 3 || groesse > 10) {
         printf("Das Spielfeld ist nicht in der passenden Größe, probiere es erneut!");
         return 1;

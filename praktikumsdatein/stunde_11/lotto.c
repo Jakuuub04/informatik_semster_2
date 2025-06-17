@@ -24,13 +24,13 @@ srand(time(NULL));
 
 printf("Lottozahlen-Simulation\n =======================\n");
 printf("Wieviele Kugeln sollen zur Verfügung stehen (mind. 1 und max 100): ");
-if(scanf("%d", &verfuegbar) != 1 || verfuegbar < 1 || verfuegbar > 100) {
+while(scanf("%d", &verfuegbar) != 1 || verfuegbar < 1 || verfuegbar > 100) {
     printf("Ungültige Eingabe, das Programm wird beendet.");
     return 1;
 }
 
 printf("Wieviele werden davon gezogen? (mind. 1 und max. %d): ", verfuegbar);
-if(scanf("%d", &gezogen) != 1 || gezogen < 1 || gezogen > verfuegbar) {
+while(scanf("%d", &gezogen) != 1 || gezogen < 1 || gezogen > verfuegbar) {
     printf("Ungültige Eingabe, das Programm wird beendet.");
     return 2;
 }
