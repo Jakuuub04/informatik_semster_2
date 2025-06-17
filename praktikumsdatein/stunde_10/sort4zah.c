@@ -25,7 +25,7 @@ int main() {
         return 1;
     }
     printf("Zahl 3: ");
-    while(scanf("%d", &c) != 1) {
+    while(scanf("%d", &c) != 1) { 
         return 1;
     }
     printf("Zahl 4: ");
