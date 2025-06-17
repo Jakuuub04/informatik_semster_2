@@ -44,7 +44,7 @@ if(gezogen <= verfuegbar) {
     return 3;
 }
 
-int menge[100];
+int menge[100]; 
 int gezogene[100];
 
 for(int i = 0; i < verfuegbar; i++) {

@@ -6,7 +6,9 @@ int main() {
     int Hans = 3, Fritz = 5, runde = 1; 
 
     printf("Wie viele Aepfel haben Fritz und Hans gekauft: ");
-    scanf("%d", &aepfel);
+    if(scanf("%d", &aepfel) != 1) {
+        return 1;
+    }
     
     while (aepfel % 8 != 0) {
         printf("Diese Zahl ist leider nicht durch 8 teilbar, versuche es erneut: ");

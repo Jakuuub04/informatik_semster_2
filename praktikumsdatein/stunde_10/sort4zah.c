@@ -17,13 +17,21 @@ int main() {
     printf("-----------------------------\n");
 
     printf("Zahl 1: ");
-    scanf("%d", &a);
+    if(scanf("%d", &a) != 1) {
+        return 1;
+    }
     printf("Zahl 2: "); 
-    scanf("%d", &b);
+    if(scanf("%d", &b) != 1) {
+        return 1;
+    }
     printf("Zahl 3: ");
-    scanf("%d", &c);
+    if(scanf("%d", &c) != 1) {
+        return 1;
+    }
     printf("Zahl 4: ");
-    scanf("%d", &d);
+    if(scanf("%d", &d) != 1) {
+        return 1;
+    }
 
     if (a <= b && b <= c && c <= d) {
         printf("Was soll das?!\n");

@@ -17,13 +17,17 @@ int main() {
 
     while (1) {
         printf("Neuer Streckenpunkt x,y (Abbruch bei x=-1): ");
-        scanf("%d", &newx);
+    if(scanf("%d", &newx) != 1) {
+        return 1;
+    }
 
         if (newx == -1) {
             break;
         }
 
-        scanf(",%d", &newy);
+    if(scanf("%d", &newy) != 1) {
+        return 1;
+    }
         streckenlaenge += abstand(x, y, newx, newy);
 
         x = newx;
