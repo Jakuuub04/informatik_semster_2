@@ -1,37 +1,41 @@
 #include <stdio.h>
 
 int main() {
-
     int aepfel = 0;
     int Hans = 3, Fritz = 5, runde = 1; 
     int valid = 0;
- 
 
-    printf("Wie viele Aepfel haben Fritz und Hans gekauft: ");
-    while (valid != 1) {
-        printf("Falsch, neuer Versuch: ");
-        valid =  scanf("%d", &aepfel);
-        fflush(stdin);
+
+    while (!valid) {
+        printf("Wie viele Aepfel haben Fritz und Hans gekauft (durch 8 teilbar): ");
+
+        while (scanf("%d", &aepfel) != 1) {
+            printf("Ungültige Eingabe! Bitte eine ganze Zahl eingeben.\n");
+            int c;
+            while ((c = getchar()) != '\n' && c != EOF);
+            continue;
+        }
+
+        int c;
+        while ((c = getchar()) != '\n' && c != EOF);
+
+        if (aepfel % 8 != 0) {
+            printf("Diese Zahl ist leider nicht durch 8 teilbar.\n");
+        } else {
+            valid = 1;
+        }
     }
-    
-    while (aepfel % 8 != 0) {
-        printf("Diese Zahl ist leider nicht durch 8 teilbar, versuche es erneut: ");
-        scanf("%d", &aepfel);
-    }
-    
+
     printf("| Runde | Fritz | Hans | Rest |\n");
     printf("|-----------------------------|\n");
-    
-    int  rest = aepfel;
-    
+
+    int rest = aepfel;
+
     while (rest > 0) {
+        printf("| %5d | %5d | %4d | %4d |\n", runde, Fritz * runde, Hans * runde, rest - (Fritz + Hans));
         rest = rest - (Hans + Fritz);
-        printf("| %5d | %5d | %4d | %4d |\n", runde, Fritz * runde, Hans * runde, rest);
-
-        runde ++;
+        runde++;
     }
-
-    
 
     return 0;
 }

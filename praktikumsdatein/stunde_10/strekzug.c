@@ -13,7 +13,9 @@ int main() {
     printf("Strecken-Berechnung\n");
     printf("===================\n");
     printf("Bitte Startpunkt eingeben (x,y): ");
-    scanf("%d,%d", &x,&y);
+    while(scanf("%d,%d", &x,&y) != 2) {
+        return 1;
+    }
 
     while (1) {
         printf("Neuer Streckenpunkt x,y (Abbruch bei x=-1): ");
