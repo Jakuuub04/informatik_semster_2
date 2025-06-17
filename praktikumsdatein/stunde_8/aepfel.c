@@ -16,9 +16,6 @@ int main() {
             continue;
         }
 
-        int c;
-        while ((c = getchar()) != '\n' && c != EOF);
-
         if (aepfel % 8 != 0) {
             printf("Diese Zahl ist leider nicht durch 8 teilbar.\n");
         } else {
