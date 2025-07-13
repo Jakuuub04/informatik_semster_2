@@ -18,6 +18,26 @@ int quadsum(int n) {
     }
 }
 
+void fuelleArray (int array[], int anzahl) {
+    srand(TIME(NULL));
+    for (int i = 0; i < anzahl; i++){
+        array[i] = rand() % 101 + 100;
+    }
+}
+
+void rolleArray (int array[], int anzahl) {
+    if (anzahl > 0) {
+        int endWert = array[anzahl - 1];
+        for (int i = anzahl - 1; i > 0; i--) {
+            array[i] = array[i - 1];
+        } 
+        endWert = array[0];
+    }
+    
+}
+
+
+
 void main() {
 
     int vari;
@@ -31,9 +51,10 @@ void main() {
 
     printf("Dual: ");
     
-    for (int i = sizeof(int)*8-1; i >= 0; i--) {
+    for(int i = sizeof(int)*8-1; i >= 0; i--) {
         printf("%d", (vari >> i) & 0x1);
     }
+    
     printf("\n");
 
     int array[200];
@@ -55,3 +76,7 @@ void main() {
     printf("%d", quadsum(vari));
     
 }
+
+
+//for (int i = sizeof(int)*8-1; i >= 0; i--) {
+//        printf("%d", (vari >> i) & 0x1);
