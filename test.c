@@ -19,7 +19,6 @@ int quadsum(int n) {
 }
 
 void fuelleArray (int array[], int anzahl) {
-    srand(TIME(NULL));
     for (int i = 0; i < anzahl; i++){
         array[i] = rand() % 101 + 100;
     }
@@ -42,6 +41,12 @@ void main() {
 
     int vari;
     srand(time(NULL));
+
+    double myvar;
+    double *svr = &myvar;
+    *svr = 10.00; 
+    printf("%f", myvar);
+
 
     printf("eingabe: ", &vari);
     scanf("%d", &vari);
@@ -79,4 +84,5 @@ void main() {
 
 
 //for (int i = sizeof(int)*8-1; i >= 0; i--) {
-//        printf("%d", (vari >> i) & 0x1);
+//        printf("%d", (vari >> i) & 0x1);#
+
